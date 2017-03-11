@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- %c 类全名,%d 时间,%f 类名,%l 位置,%m 信息,%n 换行,%p 级别,%r 耗时,%t 线程名 -->
+			<param name="ConversionPattern" value="%-5p %d{MM-dd HH:mm:ss,SSS} %m (%F:%L) \n" />
+		</layout>
+	</appender>
+
+	<!-- 定义显示哪种级别的日志， OFF，FATAL，ERROR，WARN，INFO，DEBUG，TRACE，ALL -->
+	<root>
+		<level value="info" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</log4j:configuration>
